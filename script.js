@@ -25,8 +25,8 @@ function listadoVector(vec) {
 
 boton.addEventListener("click", function() {
     let buscar_num = num.valueAsNumber;
-    let izq = 1; // Valor de la izquierda
-    let der = arreglo7500.length; // Valor de la derecha
+    let izq = 1; 
+    let der = arreglo7500.length; 
     let mid;
     let cont = 0;
 
@@ -34,16 +34,16 @@ boton.addEventListener("click", function() {
         mid = Math.floor((izq + der) / 2);
 
         if (arreglo7500[mid] === buscar_num) {
-            alert("El número ha sido encontrado en la línea " + (mid + 1) + ".");  
+            alert("El número " + buscar_num + " ha sido encontrado en la línea " + (mid + 1) + ".");  
             alert("Número de iteraciones: " + cont);  
             ausencia = 1;
             break;
         } else if (buscar_num < arreglo7500[mid]) {
             der = mid - 1;
-            cont =+ 1
+            cont += 1
         } else {
             izq = mid + 1;
-            cont =+ 1
+            cont += 1
         }
     }
 
